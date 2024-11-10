@@ -1,0 +1,206 @@
+/* Estilos del contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #1a1a1a; /* Fondo oscuro */
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    color: #e0e0e0;
+    height: 90vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
+    position: relative;
+  }
+
+/* Título */
+.title {
+    font-size: 2em;
+    color: #00ffff; /* Color cian brillante */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Fondo general de IA */
+body {
+    background-image: url('../public/fondo.webp');
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+    /* labels centrados */
+    
+}
+
+/* Mensajes de éxito y error */
+.error, .success {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.error {
+    color: #ff4c4c;
+    background-color: rgba(255, 76, 76, 0.2);
+    border: 1px solid #ff4c4c;
+}
+
+.success {
+    color: #4caf50;
+    background-color: rgba(76, 175, 80, 0.2);
+    border: 1px solid #4caf50;
+}
+
+/* Botón */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 20px; /* Mueve el botón hacia la parte inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el botón horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px; /* Tamaño del botón */
+    height: 60px; /* Tamaño del botón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+button i {
+    font-size: 24px;
+  }
+
+/* Mensajes de advertencia de permisos */
+.permissions-warning {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    display: none;
+}
+
+/* Chat container */
+.chat-container {
+    margin-top: 20px;
+    max-height: 500px; /* Limita la altura del contenedor */
+    overflow-y: auto; /* Habilita el scroll cuando sea necesario */
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #333333;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth; /* Desplazamiento suave cuando el usuario interactúe */
+}
+
+/* Mensaje de chat */
+.chat-message {
+    display: flex;
+    max-width: 100%; /* Asegura que el mensaje no se desborde más allá del contenedor */
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 20px;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.4em;
+    word-wrap: break-word; /* Permite que las palabras largas se ajusten */
+    animation: fadeIn 0.5s ease;
+    flex-wrap: wrap; /* Permite que el texto haga un salto de línea cuando sea necesario */
+}
+
+/* Asegúrate de que los mensajes no se vayan hacia abajo al final del chat */
+.chat-container::-webkit-scrollbar {
+    width: 8px; /* Puedes ajustar el tamaño del scrollbar */
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+
+/* Mensaje del usuario (a la derecha) */
+.user-message {
+    background-color: #c03ad7; /* Verde para el usuario */
+    color: #ffffff;
+    align-self: flex-end;
+    border-top-right-radius: 0;
+    max-width: 80%; /* Limita el ancho máximo */
+    word-wrap: break-word; /* Asegura que el texto largo se ajuste */
+    overflow-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+    white-space: normal; /* Permite saltos de línea y ajuste de texto */
+    word-break: break-word; /* Divide palabras largas sin espacios si es necesario */
+    display: inline-block; /* Asegura que el mensaje se ajusta al ancho */
+}
+
+/* Mensaje del bot (a la izquierda) */
+.bot-message {
+    background-color: #2196F3; /* Azul para el bot */
+    color: #ffffff;
+    align-self: flex-start;
+    border-top-left-radius: 0;
+    max-width: 80%; /* Limita el ancho máximo */
+    word-wrap: break-word; /* Asegura que el texto largo se ajuste */
+    overflow-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+    white-space: normal; /* Permite saltos de línea y ajuste de texto */
+    word-break: break-word; /* Divide palabras largas sin espacios si es necesario */
+    display: inline-block; /* Asegura que el mensaje se ajusta al ancho */
+}
+
+/* Efectos de sombras y animaciones */
+.chat-message {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos del mensaje de bienvenida futurista */
+.message_bienvenida {
+    color: #00ffff; /* Color cian brillante */
+    font-size: 3em;
+    font-weight: bold;
+    align-self: center;
+    background: rgba(0, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    animation: pulse 1.5s infinite alternate;
+    transition: opacity 0.5s ease; /* Transición de desaparición */
+}
+
+/* Efecto de pulso */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    }
+}
