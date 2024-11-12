@@ -27,7 +27,7 @@
 
 /* Fondo general de IA */
 body {
-    background-image: url('../public/fondo.webp');
+    background-image: url('/public/fondo.png');
     font-family: 'Arial', sans-serif;
     color: #e0e0e0;
     /* labels centrados */
