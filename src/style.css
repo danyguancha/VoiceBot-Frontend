@@ -13,9 +13,9 @@
     height: 90vh; /* Asegura que el contenedor ocupe toda la altura de la pantalla */
     position: relative;
   }
-
-/* Título */
-.title {
+  
+  /* Título */
+  .title {
     font-size: 2em;
     color: #00ffff; /* Color cian brillante */
     text-align: center;
@@ -23,83 +23,73 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-}
-
-/* Fondo general de IA */
-body {
-    background-image: url('/public/fondo.png');
-    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Fondo general de IA */
+  body {
+    background-image: url("/public/fondo.png");
+    font-family: "Arial", sans-serif;
     color: #e0e0e0;
     /* labels centrados */
-    
-}
-
-/* Mensajes de éxito y error */
-.error, .success {
+  }
+  
+  /* Mensajes de éxito y error */
+  .error,
+  .success {
     margin: 10px 0;
     padding: 10px;
     border-radius: 4px;
-}
-
-.error {
+  }
+  
+  .error {
     color: #ff4c4c;
     background-color: rgba(255, 76, 76, 0.2);
     border: 1px solid #ff4c4c;
-}
-
-.success {
+  }
+  
+  .success {
     color: #4caf50;
     background-color: rgba(76, 175, 80, 0.2);
     border: 1px solid #4caf50;
-}
-
-/* Botón */
-button {
-    padding: 12px 24px;
+  }
+  
+  /* Botón */
+  button {
     font-size: 16px;
     cursor: pointer;
-    background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 50%;
     transition: background-color 0.3s;
-    position: absolute;
-    bottom: 20px; /* Mueve el botón hacia la parte inferior */
-    left: 50%;
-    transform: translateX(-50%); /* Centra el botón horizontalmente */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60px; /* Tamaño del botón */
-    height: 60px; /* Tamaño del botón */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 60px; /* Tamaño fijo del botón */
+    height: 60px; /* Tamaño fijo del botón */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra de botón */
   }
-
-button:hover {
+  
+  button:hover {
     background-color: #0056b3;
-}
-
-button:disabled {
+  }
+  
+  button:disabled {
     background-color: #cccccc;
     cursor: not-allowed;
-}
-
-button i {
+  }
+  
+  button i {
     font-size: 24px;
   }
-
-/* Mensajes de advertencia de permisos */
-.permissions-warning {
+  
+  /* Mensajes de advertencia de permisos */
+  .permissions-warning {
     background-color: #fff3cd;
     border: 1px solid #ffeeba;
     padding: 10px;
     margin: 10px 0;
     border-radius: 4px;
     display: none;
-}
-
-/* Chat container */
-.chat-container {
+  }
+  
+  /* Chat container */
+  .chat-container {
     margin-top: 20px;
     max-height: 500px; /* Limita la altura del contenedor */
     overflow-y: auto; /* Habilita el scroll cuando sea necesario */
@@ -110,10 +100,10 @@ button i {
     display: flex;
     flex-direction: column;
     scroll-behavior: smooth; /* Desplazamiento suave cuando el usuario interactúe */
-}
-
-/* Mensaje de chat */
-.chat-message {
+  }
+  
+  /* Mensaje de chat */
+  .chat-message {
     display: flex;
     max-width: 100%; /* Asegura que el mensaje no se desborde más allá del contenedor */
     margin: 10px 0;
@@ -125,21 +115,20 @@ button i {
     word-wrap: break-word; /* Permite que las palabras largas se ajusten */
     animation: fadeIn 0.5s ease;
     flex-wrap: wrap; /* Permite que el texto haga un salto de línea cuando sea necesario */
-}
-
-/* Asegúrate de que los mensajes no se vayan hacia abajo al final del chat */
-.chat-container::-webkit-scrollbar {
+  }
+  
+  /* Asegúrate de que los mensajes no se vayan hacia abajo al final del chat */
+  .chat-container::-webkit-scrollbar {
     width: 8px; /* Puedes ajustar el tamaño del scrollbar */
-}
-
-.chat-container::-webkit-scrollbar-thumb {
+  }
+  
+  .chat-container::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-}
-
-
-/* Mensaje del usuario (a la derecha) */
-.user-message {
+  }
+  
+  /* Mensaje del usuario (a la derecha) */
+  .user-message {
     background-color: #c03ad7; /* Verde para el usuario */
     color: #ffffff;
     align-self: flex-end;
@@ -150,11 +139,11 @@ button i {
     white-space: normal; /* Permite saltos de línea y ajuste de texto */
     word-break: break-word; /* Divide palabras largas sin espacios si es necesario */
     display: inline-block; /* Asegura que el mensaje se ajusta al ancho */
-}
-
-/* Mensaje del bot (a la izquierda) */
-.bot-message {
-    background-color: #2196F3; /* Azul para el bot */
+  }
+  
+  /* Mensaje del bot (a la izquierda) */
+  .bot-message {
+    background-color: #2196f3; /* Azul para el bot */
     color: #ffffff;
     align-self: flex-start;
     border-top-left-radius: 0;
@@ -164,24 +153,24 @@ button i {
     white-space: normal; /* Permite saltos de línea y ajuste de texto */
     word-break: break-word; /* Divide palabras largas sin espacios si es necesario */
     display: inline-block; /* Asegura que el mensaje se ajusta al ancho */
-}
-
-/* Efectos de sombras y animaciones */
-.chat-message {
+  }
+  
+  /* Efectos de sombras y animaciones */
+  .chat-message {
     animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
+  }
+  
+  @keyframes fadeIn {
     from {
-        opacity: 0;
+      opacity: 0;
     }
     to {
-        opacity: 1;
+      opacity: 1;
     }
-}
-
-/* Estilos del mensaje de bienvenida futurista */
-.message_bienvenida {
+  }
+  
+  /* Estilos del mensaje de bienvenida futurista */
+  .message_bienvenida {
     color: #00ffff; /* Color cian brillante */
     font-size: 3em;
     font-weight: bold;
@@ -193,14 +182,95 @@ button i {
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
     animation: pulse 1.5s infinite alternate;
     transition: opacity 0.5s ease; /* Transición de desaparición */
-}
-
-/* Efecto de pulso */
-@keyframes pulse {
+  }
+  
+  /* Efecto de pulso */
+  @keyframes pulse {
     0% {
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     }
     100% {
-        box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
     }
-}
+  }
+  
+  /* Aseguramos que los botones se alineen horizontalmente */
+  .botones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilo común para todos los botones */
+  .botones button {
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .botones button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .start-button {
+    background-color: #007bff;
+  }
+  
+  .start-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .export-button {
+    background-color: #49be12;
+  }
+  
+  .export-button:hover {
+    background-color: #378d05;
+  }
+  
+  .text-button {
+    background-color: #f08420;
+  }
+  
+  .text-button:hover {
+    background-color: #c4660e;
+  }
+  
+  .cost-button {
+    background-color: #e72222;
+  }
+  
+  .cost-button:hover {
+    background-color: #c40e0e;
+  }
+  
+  .botones i {
+    font-size: 24px;
+  }
+  
+  .interaction-button {
+    background-color: #ce1fb6;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    width: 200px;
+    padding: 6px 10px; /* Ajustar el padding para hacerlo más rectangular */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .interaction-button i {
+    font-size: 20px; /* Ajustar el tamaño del icono si es necesario */
+  }
+  
+  .interaction-button:hover {
+    background-color: #a30c8f;
+  }
