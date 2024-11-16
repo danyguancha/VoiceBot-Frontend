@@ -34,7 +34,7 @@ const VoiceToText = () => {
     const formData = new FormData();
     formData.append('audio', audioBlob, 'audio.wav');
     
-    api.post("/api/chat/", formData, {
+    api.post("/chat/chat_api_chat__post/", formData, {
       headers: { 'Content-Type': 'multipart/form-data' }
     })
       .then(response => {
