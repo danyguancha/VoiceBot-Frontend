@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'https://voice-bot-back.onrender.com/docs#',
+    baseURL: 'https://voice-bot-back.onrender.com/',
     headers: { 'Content-Type': 'application/json' },
 });
 
