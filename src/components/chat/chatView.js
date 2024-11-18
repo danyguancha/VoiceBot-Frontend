@@ -109,8 +109,7 @@ const VoiceToText = () => {
     const formData = new FormData();
     formData.append("audio", audioBlob, "audio.wav");
 
-    api
-      .post("/api/chat/", formData, {
+    api.post("/api/chat/", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       })
       .then((response) => {
@@ -190,8 +189,11 @@ const VoiceToText = () => {
   };
 
   const handleStartConversation = () => {
-    addChatMessage("¡Hola! Soy la asistente virtual de Indra. Me puedes proporcionar tu número de documento para poder ayudarte con tu consulta.", "bot");
-    speakText("¡Hola! Soy la asistente virtual de Indra. Me puedes proporcionar tu número de documento para poder ayudarte con tu consulta.");
+    api.get("/api/chat_first_message/", {headers: { "Content-Type": "application/json" }})
+    .then((response) => {
+      addChatMessage(response.data.text, "bot");
+      speakText(response.data.text);
+    })
 
   };
 
