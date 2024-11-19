@@ -118,7 +118,7 @@ const VoiceToText = () => {
         setemocionesCount(true);
 
         setCost((prevState) => prevState + response.data.cost);
-        setTokenCount((prevState) => prevState + response.data.token_count);
+        setTokenCount((prevState) => prevState + response.data.num_token_count);
         setWordCount((prevState) => prevState + response.data.word_count);
 
         speakText(response.data.response);
